@@ -21,25 +21,19 @@ if (!function_exists('child_theme_enqueue_scripts')) {
  * @param array $original_atts, original attributes passed to shortcode
  * @return string $output
  */
-function be_dps_template_part($output, $original_atts)
-{
-	// Return early if our "layout" attribute is not specified
-	if (empty($original_atts['layout']))
+
+if (!function_exists("be_dps_template_part")) {
+	function be_dps_template_part($output, $original_atts)
+	{
+		// Return early if our "layout" attribute is not specified
+		if (empty($original_atts['layout']))
+			return $output;
+		ob_start();
+		get_template_part('partials/dps', $original_atts['layout']);
+		$new_output = ob_get_clean();
+		if (!empty($new_output))
+			$output = $new_output;
 		return $output;
-	ob_start();
-	get_template_part('partials/dps', $original_atts['layout']);
-	$new_output = ob_get_clean();
-	if (!empty($new_output))
-		$output = $new_output;
-	return $output;
-}
-add_action('display_posts_shortcode_output', 'be_dps_template_part', 10, 2);
-
-
-function wpa_44672($wp_query)
-{
-	if (true) {
-		set_query_var('category__not_in', ["tutoriels"]);
 	}
+	add_action('display_posts_shortcode_output', 'be_dps_template_part', 10, 2);
 }
-add_action('pre_get_posts', 'wpa_44672');
