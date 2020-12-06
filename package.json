@@ -1,0 +1,21 @@
+{
+  "name": "blogasm-child",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Craaftx/blogasm-child",
+  "author": "Guilmain Dorian <hello@guilmaindorian.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack -p"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
