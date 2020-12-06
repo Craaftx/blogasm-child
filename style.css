@@ -1,12 +1,26 @@
 /**
-Theme Name: Blogasm Child Theme
-Theme URI: https://github.com/Craaftx/blogasm-child
-Author: Guilmain Dorian
-Author URI: https://www.guilmaindorian.com
-Description: Blogasm Child theme, used on blog.guilmaindorian.com
-Template: Blogasm
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0.0
-Text Domain: Blogasm-child
+  Theme Name: Blogasm Child Theme
+  Theme URI: https://github.com/Craaftx/blogasm-child
+  Author: Guilmain Dorian
+  Author URI: https://www.guilmaindorian.com
+  Description: Blogasm Child theme, used on blog.guilmaindorian.com
+  Template: blogasm
+  Version: 1.0.0
+  Text Domain: blogasm-child
 */
+
+.dps-post-list-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.page-template-template-home .content-area.full-width {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.page-template-template-home .padded-title {
+  padding: 0 2%;
+}
