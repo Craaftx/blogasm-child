@@ -1,0 +1,70 @@
+/** a2a buttons */
+.entry-footer {
+  .a2a_span {
+    float: left;
+    margin-right: 0.6rem;
+  }
+  .a2a_svg,
+  .a2a_count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    margin-right: 5px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+/** Entry footer */
+.entry-footer {
+  justify-content: space-between;
+}
+
+/** Tags */
+div.entry-footer-tags {
+  display: flex;
+  align-items: center;
+  .entry-footer-tags-title {
+    margin-right: 0.6rem;
+  }
+  .item-sep.comma {
+    display: none;
+  }
+  .tags-links.post-meta-item a {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+    padding: 0 0.8rem;
+    background: $accent-color;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    color: #fff;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-transform: none;
+    overflow: hidden;
+    transition: all ease 0.2s;
+    &:hover {
+      color: currentColor !important;
+    }
+  }
+}
+
+/** Comments */
+.comment-list {
+  li {
+    article.comment-body {
+      background-color: rgba(240, 248, 255, 0.1);
+    }
+  }
+}

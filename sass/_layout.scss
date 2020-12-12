@@ -1,0 +1,80 @@
+/** Refactor blogasm header style */
+#masthead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 400;
+  transition: all ease-out 0.3s;
+  & .nav-bar {
+    background-color: transparent !important;
+  }
+}
+
+.website-container,
+.outer-container {
+  overflow: visible;
+}
+
+.single-post {
+  .entry-header {
+    z-index: 5;
+    position: relative;
+    padding: calc(8rem + 8vw) 0 calc(4rem + 6vw);
+    margin-bottom: calc(4rem + 2vw);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    .post-featured-image {
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      z-index: 5;
+      background: no-repeat scroll center center / cover #000;
+      animation: 0.5s ease-in forwards fadein;
+      display: flex;
+      align-items: center;
+      transform: translateX(-50%);
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: 6;
+        object-fit: cover;
+      }
+    }
+
+    .header-elements.entry-header {
+      max-width: calc(44rem + 8vw);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+  }
+}
+
+.single-post article.have-landscape-img .header-elements,
+.single-post article.have-full-width-img .header-elements,
+.single-post .site-main > article > .entry-content,
+.single-post .site-main > article > .entry-footer,
+.single-post .after-footer-content {
+  padding: 0;
+}
+
+.single-post .site-main > article > .entry-content,
+.single-post .site-main > article > .entry-footer,
+.single-post .after-footer-content {
+  max-width: calc(44rem + 8vw);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.single-post .site-main > article > .entry-header .entry-title {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  font-size: 4rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
