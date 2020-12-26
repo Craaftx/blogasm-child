@@ -1,3 +1,63 @@
+.single-post .site-main > article > .entry-content p {
+  font-size: 1.2rem;
+  letter-spacing: -0.003em;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  letter-spacing: -0.003em;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.single-post .site-main > article > .entry-content {
+  dl,
+  ol,
+  ul {
+    font-size: 1.2rem;
+    letter-spacing: -0.003em;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+code {
+  background-color: #1d1d1d;
+  color: $emphasis-color;
+  padding: 0.2em;
+  margin: -0.2em 0;
+  border-radius: 3px;
+  text-indent: 0;
+  border: none;
+  font-size: 85%;
+}
+
+pre {
+  background-color: #1d1d1d;
+  color: $emphasis-color;
+  border-radius: 4px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
 /** a2a buttons */
 .entry-footer {
   .a2a_span {
@@ -60,11 +120,152 @@ div.entry-footer-tags {
   }
 }
 
+/** After footer */
+.single-post .after-footer-content {
+  margin-top: 3rem;
+}
+
 /** Comments */
 .comment-list {
-  li {
+  article.comment-body {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(29, 29, 29, 1);
+    border: 2px solid #1d1d1d;
+    padding: 32px 48px;
+    .comment-meta {
+      display: flex;
+      flex-wrap: wrap;
+      .comment-awaiting-moderation {
+        width: 100%;
+      }
+      .comment-author {
+        img.avatar {
+          position: absolute;
+          top: 32px;
+          left: -32px;
+          border-radius: 50%;
+        }
+        .fn {
+          font-weight: 600;
+          font-size: 1.4rem;
+          color: $title-color;
+        }
+        .says {
+          display: none;
+        }
+      }
+      .comment-metadata {
+        margin-left: auto;
+        a {
+          color: $emphasis-color;
+        }
+        .edit-link {
+          margin-left: 1rem;
+        }
+      }
+    }
+    .comment-content {
+      margin-top: 8px;
+      margin-left: 0;
+      color: $primary-color;
+    }
+    .reply {
+      margin-top: 16px;
+      padding-left: 0;
+      a {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0px !important;
+        margin-bottom: 0 !important;
+        color: $emphasis-color !important;
+        border-width: 1px !important;
+        border-color: $emphasis-color !important;
+        background: transparent !important;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: unset;
+        line-height: 1em;
+        text-transform: none;
+        border-radius: 2rem !important;
+      }
+    }
+  }
+  ol.children {
     article.comment-body {
-      background-color: rgba(240, 248, 255, 0.1);
+      background-color: rgba(29, 29, 29, 0.2);
+    }
+  }
+  .bypostauthor {
+    & > article.comment-body:nth-child(1) .fn a {
+      color: $accent-color;
+    }
+  }
+}
+
+/** Comment respond form **/
+.comment-respond {
+  position: relative;
+  border-radius: 10px;
+  background-color: #1d1d1d;
+  border: 2px solid #1d1d1d;
+  padding: 32px 48px;
+  p {
+    margin-bottom: 1rem;
+  }
+  .comment-notes {
+    color: $emphasis-color;
+  }
+  form {
+    label {
+      font-size: 1rem;
+    }
+    input,
+    textarea {
+      width: 100%;
+      max-width: 480px;
+      padding: 3px 12px;
+      border: 1px solid #1d1d1d;
+      border-radius: 10px;
+      color: $primary-color;
+      background-color: $background-color;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+  .comment-form-cookies-consent {
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    label,
+    input {
+      display: inline;
+    }
+  }
+  .form-submit input {
+    width: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
+    color: $accent-inverse !important;
+    border-width: 2px !important;
+    border-color: $accent-color !important;
+    background: $accent-color !important;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: unset;
+    line-height: 1em;
+    text-transform: none;
+    border-radius: 2rem !important;
+    cursor: pointer;
+    &:hover {
+      background: transparent !important;
     }
   }
 }

@@ -23,16 +23,16 @@ if (post_password_required()) {
 
 <div id="comments" class="comments-area w-100">
 
+    <h2 class="comments-title section-title custom-title">
+        <?php
+        printf(
+            esc_html__('Commentaires ', 'blogasm')
+        );
+        ?>
+    </h2><!-- .comments-title -->
     <?php
     // You can start editing here -- including this comment!
     if (have_comments()) : ?>
-        <h2 class="comments-title section-title">
-            <?php
-            printf(
-                esc_html__('Commentaires ', 'blogasm')
-            );
-            ?>
-        </h2><!-- .comments-title -->
 
         <?php the_comments_navigation(); ?>
 

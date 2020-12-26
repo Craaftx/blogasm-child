@@ -1,0 +1,247 @@
+/** Override colors from parent theme */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: $primary-color;
+}
+
+a {
+  color: $primary-color;
+}
+
+a:visited {
+  color: $primary-color;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $primary-color;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+.wp-caption .wp-caption-text {
+  padding: 1em 0;
+  color: #999;
+  background: #fafafa;
+}
+
+.widget ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.widget ul li a {
+  color: #666;
+}
+
+.widget .search-form input[type="search"] {
+  width: 100%;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+  font-size: 14px;
+  /*outline: none;*/
+  color: $primary-color;
+  background-color: transparent;
+}
+
+.widget .textwidget ul li {
+  color: $primary-color;
+  display: list-item;
+}
+
+.header-social .social-profiles-widget ul li a {
+  width: auto;
+  height: auto;
+  color: #333;
+}
+
+.post-meta-item {
+  margin-right: 24px;
+  color: #333;
+}
+
+.post-meta-item a {
+  text-decoration: none;
+  color: #808080;
+  -webkit-transition: color 0.35s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.post-meta-item a:hover {
+  color: $primary-color !important;
+}
+
+.navigation.pagination {
+  border-top: 1px solid #e5e5e5;
+}
+
+.navigation.pagination .page-numbers {
+  color: #666;
+}
+
+.navigation.pagination .page-numbers:hover,
+.page-links .page-number:hover {
+  color: $primary-color;
+}
+
+.post-thumbnail-wrap .sticky-icon,
+.post-thumbnail-wrap .audio-icon,
+.post-thumbnail-wrap .video-icon,
+.post-thumbnail-wrap .gallery-icon {
+  color: #4d4d4d;
+  background: #fff;
+}
+
+.gallery .gallery-caption,
+.wp-block-gallery .gallery-caption {
+  color: #666;
+}
+
+.single .site-main .section-title {
+  color: $primary-color;
+}
+
+.footer-bar {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer-bar a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bar.cs-dark a {
+  color: $primary-color;
+}
+
+.footer-bar a:hover {
+  color: #fff;
+}
+
+.footer-bar.cs-dark a:hover {
+  color: $primary-color;
+}
+
+.site-branding .site-title a {
+  color: $primary-color;
+}
+
+.site-branding .site-description {
+  color: #666;
+}
+
+.primary-menu li a {
+  color: $primary-color;
+}
+
+ul.primary-menu li a:hover,
+ul.primary-menu li.current-menu-item > a,
+ul.primary-menu li:hover > a,
+ul.primary-menu li.menu-item-has-children:hover::after,
+ul.primary-menu li.current-menu-item > a,
+ul.primary-menu li.menu-item-has-children ul.sub-menu li.current-menu-item > a,
+ul.sub-menu li.current-menu-item > a {
+  color: $primary-color;
+}
+
+.blog-posts article.post-col .post-content-wrap {
+  background-color: $background-color;
+}
+
+.archived-posts article.post-col .entry-title a {
+  color: $primary-color;
+}
+
+.archived-posts article.post-col .post-meta-item,
+.archived-posts article.post-col .post-meta-item a,
+.page-header .page-title label {
+  color: $accent-color;
+}
+
+.archived-posts article.post-col .entry-content p,
+.page-header .archive-description p {
+  color: $primary-color;
+}
+
+.single-post .site-main > article > .entry-header .entry-title {
+  color: $primary-color;
+}
+
+.single-post .site-main > article .post-meta-item,
+.single-post .site-main > article .post-meta-item a,
+.single-post-related-post .post-meta-item,
+.single-post-related-post .post-meta-item a {
+  color: $primary-color;
+}
+
+.single-post .site-main > article > .entry-content p {
+  color: $reading-color;
+}
+
+.single-post .site-main > article > .entry-content {
+  color: $primary-color;
+}
+
+.single-post .site-main > article > .entry-content a {
+  position: relative;
+  color: $primary-color;
+  text-decoration: none;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $accent-color;
+    transition: all ease-out 0.1s;
+  }
+}
+
+.single-post .site-main > article > .entry-content a:hover,
+.single-post .site-main > article > .entry-content a:focus,
+.single-post .site-main > article > .entry-content a:active {
+  color: $primary-color;
+  &::after {
+    transform: translateY(-3px);
+  }
+}
+
+.navigation.post-navigation .nav-links .entry-title {
+  color: $primary-color;
+}
+
+.page .site-main > article > .entry-header .entry-title {
+  color: $primary-color;
+}
+
+.page .site-main > article > .entry-content p {
+  color: $primary-color;
+}
+
+.footer-bar {
+  background: rgb(0, 0, 0);
+}

@@ -92,3 +92,32 @@ if (!function_exists('banner_text_mode_color_save_postdata')) {
 	}
 	add_action('save_post', 'banner_text_mode_color_save_postdata');
 }
+
+/**
+ * Function to show the copyright information
+ */
+function blogasm_footer_copyright_information()
+{
+	printf(
+		'<div class="site-info">%1$s <a href="%2$s">%3$s</a> | %4$s <!-- .site-info -->',
+		sprintf(
+			'%1$s %2$s',
+			esc_html__('Copyright &copy;', 'blogasm'),
+			esc_html(date('Y'))
+		),
+		esc_url(home_url('/')),
+		esc_html(get_bloginfo('name', 'display')),
+		esc_html__('All rights reserved', 'blogasm'),
+	);
+}
+
+/** Add new default gravatar */
+if (!function_exists('default_new_gravatar')) {
+	function default_new_gravatar($avatar_defaults)
+	{
+		$myavatar = 'https://i.ibb.co/Yb7sDw5/default-gravatar.jpg';
+		$avatar_defaults[$myavatar] = "Default Gravatar";
+		return $avatar_defaults;
+	}
+	add_filter('avatar_defaults', 'default_new_gravatar');
+}

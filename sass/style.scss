@@ -10,6 +10,8 @@
 */
 
 @import "variables";
+@import "colors";
+@import "form";
 @import "layout";
 @import "post";
 @import "dps";
@@ -27,4 +29,6 @@ html {
 body {
   font-size: 16px;
   color: $primary-color;
+  background-color: $background-color;
+  min-height: 100vh;
 }
