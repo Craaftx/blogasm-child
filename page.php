@@ -27,14 +27,7 @@ if (blogasm_has_primary_content_class()) {
 }
 
 while (have_posts()) : the_post(); ?>
-  <?php
-  $banner_text_mode = "banner-is-light";
-  $banner_text_mode_color_mode = get_post_meta(get_the_ID(), 'banner_text_mode_color_mode', true);
-  if ($banner_text_mode_color_mode === "dark") {
-    $banner_text_mode = "banner-is-dark";
-  }
-  ?>
-  <div class="outer-container have-mt <?php echo esc_attr($banner_text_mode) ?>">
+  <div class="outer-container have-mt">
     <div class="container-fluid">
       <div class="<?php echo esc_attr(implode(' ', $row_class)); ?>">
         <div class="col-12 d-flex flex-wrap">
