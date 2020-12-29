@@ -122,7 +122,7 @@ function blogasm_footer_copyright_information()
 if (!function_exists('default_new_gravatar')) {
 	function default_new_gravatar($avatar_defaults)
 	{
-		$myavatar = 'https://i.ibb.co/Yb7sDw5/default-gravatar.jpg';
+		$myavatar = 'https://blog.guilmaindorian.com/wp-content/uploads/2020/12/default_gravatar.jpg';
 		$avatar_defaults[$myavatar] = "Default Gravatar";
 		return $avatar_defaults;
 	}
