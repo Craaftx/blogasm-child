@@ -1,90 +1,84 @@
+body {
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+  color: $primary-color;
+  font-weight: 700;
+}
+
 /** Main titles */
 .site-branding .site-title a {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #000;
-  font-size: 20px;
-  line-height: 1em;
+  font-family: $font-secondary;
 }
 
 .site-branding .site-description {
-  margin-top: 8px;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #666;
-  font-size: 13px;
-  line-height: 1.2em;
+  font-family: $font-secondary;
 }
 
 .primary-menu li a {
-  padding: 12px 16px;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: $font-secondary;
   font-weight: 500;
-  text-transform: uppercase;
-  font-size: 13px;
-  line-height: 1.5em;
-  letter-spacing: 0.05em;
-  color: #000;
+  font-size: 0.8rem;
 }
 
 .archived-posts article.post-col .entry-title a {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: $font-secondary;
   font-weight: 500;
   text-transform: none;
-  color: #000;
-  font-size: 18px;
+  font-size: 1.6rem;
   line-height: 1.4em;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
+  margin-bottom: 0rem;
 }
 
 .single-post .site-main > article > .entry-header .entry-title {
-  margin-top: 16px;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  color: #000;
-  font-size: 32px;
-  line-height: 1.4em;
-  letter-spacing: 0.01em;
+  font-family: $font-secondary;
+}
+
+.single-post .site-main > article > .entry-content ul {
+  font-family: $font-primary;
 }
 
 .page .site-main > article > .entry-header .entry-title {
-  margin-top: 16px;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  color: #000;
-  font-size: 32px;
-  line-height: 1.4em;
-  letter-spacing: 0.01em;
+  font-family: $font-secondary;
 }
 
 .navigation.post-navigation .nav-links .entry-title {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-family: $font-secondary;
   font-weight: 500;
   text-transform: none;
-  color: #000;
-  font-size: 24px;
+  font-size: 1.6rem;
   line-height: 1.4em;
   letter-spacing: 0.01em;
 }
 
 .widget-title {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 16px;
+  font-family: $font-primary;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 1.2rem;
   line-height: 1.5em;
-  letter-spacing: 0.1em;
+  letter-spacing: 0em;
 }
 
 /** Secondary titles */
 .post-navigation .nav-links .meta-nav {
-  font-size: 13px;
-  color: #999;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-family: $font-primary;
   letter-spacing: 0.035em;
   text-transform: uppercase;
 }
@@ -95,49 +89,25 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 16px !important;
-  margin-bottom: 0 !important;
-  border-width: 0 !important;
-  color: #fff !important;
-  border-color: rgba(255, 255, 255, 0) !important;
-  background: #333 !important;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  line-height: 1em;
-  text-transform: uppercase;
-  -webkit-border-radius: 2px !important;
-  -moz-border-radius: 2px !important;
-  border-radius: 2px !important;
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  font-family: $font-primary;
 }
 
 .archived-posts article.post-col .post-meta-item,
 .archived-posts article.post-col .post-meta-item a,
 .page-header .page-title label {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-primary;
   text-transform: uppercase;
-  font-size: 11px;
+  font-weight: 500;
+  font-size: 0.8rem;
   line-height: 1em;
-  letter-spacing: 0.2em;
-  color: #999;
+  letter-spacing: 0.1rem;
 }
 
 .archived-posts article.post-col .entry-content p,
 .page-header .archive-description p {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-primary;
   text-transform: none;
-  color: #999;
-  font-size: 13px;
+  font-size: 1.2rem;
   line-height: 1.8em;
   letter-spacing: 0.01em;
 }
@@ -146,31 +116,25 @@ input[type="submit"] {
 .single-post .site-main > article .post-meta-item a,
 .single-post-related-post .post-meta-item,
 .single-post-related-post .post-meta-item a {
-  font-size: 12px;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-primary;
   text-transform: uppercase;
-  color: #999;
+  font-weight: 500;
+  font-size: 0.8rem;
   line-height: 1em;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
 }
 
 .single-post .site-main > article > .entry-content p {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: $font-primary;
   font-weight: 400;
-  text-transform: none;
-  color: #808080;
-  font-size: 14px;
-  line-height: 2em;
-  letter-spacing: 0.01em;
 }
 
 .page .site-main > article > .entry-content p {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: $font-primary;
   font-weight: 400;
-  text-transform: none;
-  color: #808080;
-  font-size: 14px;
-  line-height: 2em;
-  letter-spacing: 0.01em;
+}
+
+.comment-list article.comment-body .comment-content p {
+  font-family: $font-primary;
+  font-weight: 400;
 }

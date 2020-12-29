@@ -39,11 +39,7 @@ $footer_class[]         = 'text-left'; ?>
 
     <div class="<?php echo esc_attr(implode(' ', $header_element_class)); ?>">
 
-      <?php blogasm_posted_date();
-
-      blogasm_post_author();
-
-      blogasm_cat_links();
+      <?php
 
       the_title('<h1 class="entry-title w-100">', '</h1>'); ?>
 
@@ -84,18 +80,6 @@ $footer_class[]         = 'text-left'; ?>
 
   </div><!-- .entry-content -->
 
-  <footer class="<?php echo esc_attr(implode(' ', $footer_class)); ?>">
-    <div class="entry-footer-tags">
-      <?php blogasm_tags_links(); ?>
-    </div>
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-      <span class="a2a_span">Partager</span>
-      <a class="a2a_button_facebook" rel="nofollow"></a>
-      <a class="a2a_button_twitter" rel="nofollow"></a>
-      <a class="a2a_button_pinterest" rel="nofollow"></a>
-      <a class="a2a_button_linkedin" rel="nofollow"></a>
-    </div>
-  </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <div class="after-footer-content">

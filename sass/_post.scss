@@ -1,7 +1,8 @@
+.page .site-main > article > .entry-content p,
 .single-post .site-main > article > .entry-content p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: -0.003em;
-  line-height: 2rem;
+  line-height: 2.2rem;
   margin-bottom: 2rem;
 }
 
@@ -12,38 +13,34 @@ p {
   margin-bottom: 2rem;
 }
 
+.page .site-main > article > .entry-content,
 .single-post .site-main > article > .entry-content {
   dl,
   ol,
   ul {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: -0.003em;
-    line-height: 2rem;
+    line-height: 2.2rem;
     margin-bottom: 2rem;
   }
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-  margin-bottom: 2rem;
+.page .site-main > article > .entry-content,
+.single-post .site-main > article > .entry-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }
-
 code {
   background-color: #1d1d1d;
-  color: $emphasis-color;
-  padding: 0.2em;
-  margin: -0.2em 0;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.2em 0.4em;
   border-radius: 3px;
   text-indent: 0;
   border: none;
@@ -52,10 +49,14 @@ code {
 
 pre {
   background-color: #1d1d1d;
-  color: $emphasis-color;
+  color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   line-height: 1.5rem;
   font-size: 1rem;
+  code {
+    margin: -0.2em;
+    padding: 0.2em;
+  }
 }
 
 figcaption {

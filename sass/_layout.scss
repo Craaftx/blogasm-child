@@ -6,7 +6,7 @@
 }
 
 .site-branding .custom-logo {
-  height: 40px;
+  height: 60px;
 }
 
 @media (min-width: 768px) {
@@ -17,7 +17,7 @@
 
 @media (min-width: 1200px) {
   .site-branding .custom-logo {
-    height: 60px;
+    height: 80px;
   }
 }
 
@@ -26,12 +26,17 @@
   overflow: visible;
 }
 
+body.page,
 body.single-post {
   header.entry-header {
     position: relative;
     padding: calc(4rem + 4vw) 0;
     margin-bottom: calc(4rem + 2vw);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    @media (max-width: 992px) {
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
     div.header-elements.entry-header {
       position: relative;
       max-width: calc(48rem + 8vw);
@@ -44,7 +49,7 @@ body.single-post {
     .post-featured-image {
       position: absolute;
       width: auto;
-      height: 450px;
+      height: 400px;
       right: 0;
       top: 50%;
       display: flex;
@@ -81,7 +86,9 @@ body.single-post {
 .single-post .after-footer-content {
   padding: 0;
 }
-
+.page .site-main > article > .entry-content,
+.page .site-main > article > .entry-footer,
+.page .after-footer-content,
 .single-post .site-main > article > .entry-content,
 .single-post .site-main > article > .entry-footer,
 .single-post .after-footer-content {
@@ -90,12 +97,17 @@ body.single-post {
   padding: 0 2rem;
 }
 
+.page .site-main > article > .entry-header .entry-title,
 .single-post .site-main > article > .entry-header .entry-title {
   font-weight: 800;
   letter-spacing: -0.025em;
   font-size: 4rem;
   line-height: 1;
   text-transform: uppercase;
+
+  @media (max-width: 992px) {
+    font-size: 2.6rem;
+  }
 }
 
 /** Custom title */
@@ -110,6 +122,10 @@ body.single-post {
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 992px) {
+    font-size: 2.6rem;
+  }
 }
 
 /** Website Hero */
@@ -194,4 +210,33 @@ body.single-post {
 
 .footer-bar .site-info {
   padding: 1rem 0;
+  color: $primary-color;
+}
+
+.footer-widgets .widget {
+  p {
+    font-size: 1rem;
+  }
+  .widget-title {
+    margin-bottom: 0.5rem;
+  }
+  ul li a {
+    font-size: 1rem;
+    color: $emphasis-color;
+  }
+}
+
+/** Mobile navigation */
+.hamburger-menu span {
+  background: $primary-color;
+}
+
+.mobile-navigation.main-navigation {
+  pointer-events: none;
+  background: #1d1d1d;
+  transform: translateX(-480px);
+  &.is-active {
+    pointer-events: auto;
+    transform: translateX(0px);
+  }
 }

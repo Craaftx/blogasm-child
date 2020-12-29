@@ -3,14 +3,21 @@
 if (!function_exists('child_theme_enqueue_scripts')) {
 	function child_theme_enqueue_scripts()
 	{
+		/**
+		 * Remove custom Bootstrap and non minified CSS code to use last version of Bootstrap instead
+		 */
+		wp_dequeue_style('lib-style');
+		wp_enqueue_style('bootstrap-cdn', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
 		wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 
 		wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css');
 
 		wp_enqueue_script('child-js', get_stylesheet_directory_uri() . '/script.js', array('jquery'), '1.0', true);
 	}
-	add_action('wp_enqueue_scripts', 'child_theme_enqueue_scripts');
+	add_action('wp_enqueue_scripts', 'child_theme_enqueue_scripts', 11);
 }
+
 
 /**
  * Template Parts with Display Posts Shortcode
@@ -120,4 +127,50 @@ if (!function_exists('default_new_gravatar')) {
 		return $avatar_defaults;
 	}
 	add_filter('avatar_defaults', 'default_new_gravatar');
+}
+
+/**
+ * Remove kirki font enqueue
+ */
+add_filter('kirki/enqueue_google_fonts', '__return_empty_array');
+
+/**
+ * Override blogasm load of google fonts
+ */
+function blogasm_google_fonts_url()
+{
+
+	$fonts_url = '';
+	$fonts     = array();
+	$subsets   = 'latin,latin-ext';
+
+	$fonts = ['Inter:wght@500;700;800', 'Arimo:wght@400;700'];
+
+	if ($fonts) {
+		$fonts_url = add_query_arg(array(
+			'family' => implode('&family=', $fonts),
+			'subset' => rawurlencode($subsets),
+			'display' => rawurlencode("swap"),
+		), 'https://fonts.googleapis.com/css2');
+	}
+
+	return $fonts_url;
+}
+
+/**
+ * Remove website field from comment form
+ */
+if (!function_exists('unset_url_field')) {
+	function unset_url_field($fields)
+	{
+		$commenter = wp_get_current_commenter();
+		$consent = empty($commenter['comment_author_email']) ? '' : ' checked="checked"';
+		$text = "Gagner du temps et enregistrer mon nom et mon e-mail dans le navigateur pour mon prochain commentaire.";
+		$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' . '<label for="wp-comment-cookies-consent">' . $text . '</label></p>';
+
+		if (isset($fields['url']))
+			unset($fields['url']);
+		return $fields;
+	}
+	add_filter('comment_form_default_fields', 'unset_url_field');
 }

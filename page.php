@@ -1,9 +1,14 @@
 <?php
 
 /**
- * The template for displaying all single posts
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Blogasm
  */
@@ -35,16 +40,7 @@ while (have_posts()) : the_post(); ?>
         <div class="col-12 d-flex flex-wrap">
           <div id="primary" class="<?php echo esc_attr(implode(' ', $primary_class)); ?>">
             <main id="main" class="site-main">
-
-              <?php
-
-              /*
-                             * Include the Post-Type-specific template for the content.
-                             * If you want to override this in a child theme, then include a file
-                             * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                             */
-              get_template_part('template-parts/post/content', get_post_format()); ?>
-
+              <?php get_template_part('template-parts/page/content', 'page'); ?>
             </main><!-- #main -->
           </div><!-- #primary -->
 
@@ -61,8 +57,6 @@ while (have_posts()) : the_post(); ?>
     </div><!-- .container-fluid -->
   </div><!-- .outer-container -->
 
-<?php
-
-endwhile; // End of the loop.
+<?php endwhile; // End of the loop.
 
 get_footer();
