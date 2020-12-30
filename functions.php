@@ -119,3 +119,15 @@ if (!function_exists('unset_url_field')) {
 	}
 	add_filter('comment_form_default_fields', 'unset_url_field');
 }
+
+/**
+ * Exclude "Astuces" from Wordpress loop
+ */
+function exclude_astuces_category($query)
+{
+	if ($query->is_home()) {
+		$query->set('cat', '-16');
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'exclude_astuces_category');
