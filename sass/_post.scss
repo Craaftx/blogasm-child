@@ -63,6 +63,13 @@ figcaption {
   color: $emphasis-color;
 }
 
+.page .site-main > article > .entry-content,
+.single-post .site-main > article > .entry-content {
+  iframe {
+    margin-bottom: 1rem;
+  }
+}
+
 /** a2a buttons */
 .entry-footer {
   .a2a_span {
@@ -217,6 +224,9 @@ div.entry-footer-tags {
   background-color: #1d1d1d;
   border: 2px solid #1d1d1d;
   padding: 32px 48px;
+  @media (max-width: 992px) {
+    padding: 2rem 1.5rem;
+  }
   p {
     margin-bottom: 1rem;
   }
