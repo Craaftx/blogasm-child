@@ -95,6 +95,10 @@ $footer_class[]         = 'text-left'; ?>
       <a class="a2a_button_pinterest" rel="nofollow"></a>
       <a class="a2a_button_linkedin" rel="nofollow"></a>
     </div>
+    <div class="newsletter-wrapper">
+      <h2 class="section-title custom-title">Newsletter</h2>
+      <iframe src="https://guilmaindorian.substack.com/embed" class="newsletter-iframe" scrolling="no" width="100%" height="320" frameborder="0"></iframe>
+    </div>
   </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 

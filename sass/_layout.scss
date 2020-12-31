@@ -244,3 +244,14 @@ body.single-post {
     transform: translateX(0px);
   }
 }
+
+/** Newsletter */
+.newsletter {
+  &-wrapper {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  &-iframe {
+    background-color: #ffffff;
+  }
+}
