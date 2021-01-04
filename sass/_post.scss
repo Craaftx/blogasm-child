@@ -247,6 +247,9 @@ div.entry-footer-tags {
       border-radius: 10px;
       color: $primary-color;
       background-color: $background-color;
+      &:focus {
+        color: $primary-color;
+      }
     }
     textarea {
       height: 100px;
